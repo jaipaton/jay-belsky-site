@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Belsky | Author & Developmental Psychologist</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Jay Belsky is a leading developmental psychologist and author of Harvard University Press books including The Origins of You and The Nature of Nurture." />
+  <meta name="author" content="Jay Belsky" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f3a5f;
+      --secondary: #f4f6f8;
+      --accent: #8b1e3f;
+      --text: #222;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    header h1 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.2rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    h2 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .books {
+      background: var(--secondary);
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .book {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .book img {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .book h3 {
+      font-family: "Libre Baskerville", serif;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .book p {
+      font-size: 0.95rem;
+    }
+
+    .book a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .book a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Jay Belsky</h1>
+    <p>Developmental Psychologist · Author · Emeritus Professor  
+       Exploring how early life shapes human development</p>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#books">Books</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container about">
+    <img src="portrait-placeholder.jpg" alt="Jay Belsky portrait">
+    <div>
+      <h2>About Jay Belsky</h2>
+      <p>
+        Jay Belsky is Emeritus Professor of Human Development at the University
+        of California, Davis, and an internationally recognized scholar in
+        developmental psychology. His research integrates evolutionary theory,
+        longitudinal data, and life-course perspectives to better understand how
+        early experiences influence later health, behavior, and adaptation.
+      </p>
+      <p>
+        He is the author and co-author of influential books published by
+        <strong>Harvard University Press</strong>, bringing cutting-edge science
+        to both academic and general audiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="books" class="books">
+  <div class="container">
+    <h2>Books (Harvard University Press)</h2>
+
+    <div class="book-grid">
+
+      <div class="book">
+        <img src="origins-of-you.jpg" alt="The Origins of You book cover">
+        <h3>The Origins of You</h3>
+        <p><em>How Childhood Shapes Later Life</em></p>
+        <p>
+          Drawing on decades of longitudinal research, this book examines how
+          temperament, parenting, genes, and early adversity interact to shape
+          adult outcomes—challenging simple explanations of development.
+        </p>
+        <a href="#">Buy from Harvard University Press →</a>
+      </div>
+
+      <div class="book">
+        <img src="nature-of-nurture.jpg" alt="The Nature of Nurture book cover">
+        <h3>The Nature of Nurture</h3>
+        <p><em>Rethinking Why and How Childhood Adversity Shapes Development</em></p>
+        <p>
+          A Darwinian reinterpretation of childhood adversity, arguing that many
+          behaviors labeled “maladaptive” are in fact strategic adaptations to
+          early environments.
+        </p>
+        <a href="#">Learn more / Buy →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="container">
+    <h2>Research & Thought Leadership</h2>
+    <p>
+      Jay Belsky’s work focuses on differential susceptibility, developmental
+      plasticity, attachment, parenting, and life-history strategies. His ideas
+      have influenced psychology, psychiatry, education, and public policy.
+    </p>
+    <p>
+      Selected articles and talks can be linked here, along with a Google
+      Scholar profile or university page.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      For speaking engagements, interviews, or press inquiries, please contact:
+    </p>
+    <p>
+      <strong>Email:</strong> your-email@example.com
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Jay Belsky · All Rights Reserved
+</footer>
+
+</body>
+</html>
