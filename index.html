@@ -14,150 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #1f3a5f;
-      --secondary: #f4f6f8;
-      --accent: #8b1e3f;
-      --text: #222;
-      --max-width: 1100px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      background: #fff;
-    }
-
-    header {
-      background: var(--primary);
-      color: white;
-      padding: 4rem 1.5rem;
-    }
-
-    header h1 {
-      font-family: "Libre Baskerville", serif;
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-    }
-
-    nav {
-      margin-top: 1.5rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 1.2rem;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 4rem 1.5rem;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    h2 {
-      font-family: "Libre Baskerville", serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .about img {
-      width: 100%;
-      border-radius: 4px;
-    }
-
-    .books {
-      background: var(--secondary);
-    }
-
-    .book-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin-top: 2rem;
-    }
-
-    .book {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    }
-
-    .book img {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-
-    .book h3 {
-      font-family: "Libre Baskerville", serif;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    .book p {
-      font-size: 0.95rem;
-    }
-
-    .book a {
-      display: inline-block;
-      margin-top: 0.75rem;
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .book a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .about {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
@@ -168,11 +25,21 @@
     <p>Developmental Psychologist · Author · Emeritus Professor  
        Exploring how early life shapes human development</p>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#books">Books</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+
+      <details class="nav-dropdown">
+        <summary>
+          Works <span class="nav-caret">▾</span>
+        </summary>
+        <div class="nav-dropdown-menu" role="menu">
+          <a role="menuitem" href="books/the-nature-of-nurture.html">The Nature of Nurture</a>
+          <a role="menuitem" href="books/the-origins-of-you.html">The Origins of You</a>
+        </div>
+      </details>
+
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -194,6 +61,9 @@
         <strong>Harvard University Press</strong>, bringing cutting-edge science
         to both academic and general audiences.
       </p>
+      <p>
+        <a href="about.html">Read full biography →</a>
+      </p>
     </div>
   </div>
 </section>
@@ -203,7 +73,38 @@
     <h2>Books (Harvard University Press)</h2>
 
     <div class="book-grid">
+      
+          <div class="book">
+            <img src="nature-of-nurture.jpg" alt="The Nature of Nurture book cover">
+            <h3>The Nature of Nurture</h3>
+            <p><em>Rethinking Why and How Childhood Adversity Shapes Development</em></p>
+            <p>
+              A Darwinian reinterpretation of childhood adversity, arguing that many
+              behaviors labeled “maladaptive” are strategic adaptations.
+            </p>
 
+            <figure class="quote compact">
+              <blockquote>
+                “The Nature of Nurture brilliantly unravels the mysteries of why and how early adversity
+                matters—not just psychologically, but biologically. In doing so, Jay Belsky deftly
+                dismantles the age-old nature-nurture dichotomy.”
+              </blockquote>
+              <figcaption>
+                —Dalton Conley
+                <span class="quote-sub">Author of <em>The Social Genome</em></span>
+              </figcaption>
+            </figure>
+
+            <div class="book-actions">
+              <a class="btn btn-primary" href="https://www.hup.harvard.edu/books/9780674297197" target="_blank" rel="noopener">
+                Buy now
+              </a>
+              <a href="books/the-nature-of-nurture.html">
+                Learn more →
+              </a>
+            </div>
+          </div>
+      
         <div class="book">
             <img src="origins-of-you.jpg" alt="The Origins of You book cover">
             <h3>The Origins of You</h3>
@@ -213,22 +114,26 @@
               temperament, parenting, genes, and early adversity interact to shape
               adult outcomes.
             </p>
-            <a href="https://www.hup.harvard.edu/books/9780674983458" target="_blank" rel="noopener">
-              Buy from Harvard University Press →
-            </a>
-          </div>
 
-          <div class="book">
-            <img src="nature-of-nurture.jpg" alt="The Nature of Nurture book cover">
-            <h3>The Nature of Nurture</h3>
-            <p><em>Rethinking Why and How Childhood Adversity Shapes Development</em></p>
-            <p>
-              A Darwinian reinterpretation of childhood adversity, arguing that many
-              behaviors labeled “maladaptive” are strategic adaptations.
-            </p>
-            <a href="https://www.hup.harvard.edu/books/9780674297197" target="_blank" rel="noopener">
-                Buy from Harvard University Press →
-            </a>
+            <figure class="quote compact">
+              <blockquote>
+                “The Origins of You brings the groundbreaking research of the top developmental
+                psychologists of the past quarter-century to a wider audience... A masterpiece!”
+              </blockquote>
+              <figcaption>
+                —Dante Cicchetti
+                <span class="quote-sub">Institute of Child Development, University of Minnesota</span>
+              </figcaption>
+            </figure>
+
+            <div class="book-actions">
+              <a class="btn btn-primary" href="https://www.hup.harvard.edu/books/9780674983458" target="_blank" rel="noopener">
+                Buy now
+              </a>
+              <a href="books/the-origins-of-you.html">
+                Learn more →
+              </a>
+            </div>
           </div>
 
     </div>
@@ -257,7 +162,7 @@
       For speaking engagements, interviews, or press inquiries, please contact:
     </p>
     <p>
-      <strong>Email:</strong> your-email@example.com
+      <strong>Email:</strong> jbelsky@ucdavis.edu
     </p>
   </div>
 </section>
@@ -268,3 +173,4 @@
 
 </body>
 </html>
+
