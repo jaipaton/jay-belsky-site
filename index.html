@@ -158,12 +158,57 @@
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <p>
-      For speaking engagements, interviews, or press inquiries, please contact:
+    <p class="page-lede">
+      Please choose the type of inquiry below.
     </p>
-    <p>
-      <strong>Email:</strong> jbelsky@ucdavis.edu
-    </p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Speaking engagements</h3>
+        <form action="https://formspree.io/f/YOUR_SPEAKING_FORM_ID" method="POST">
+          <input type="hidden" name="inquiry_type" value="Speaking engagement">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Organization / Event
+            <input type="text" name="organization">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">
+            Submit speaking request
+          </button>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>General inquiries</h3>
+        <form action="https://formspree.io/f/YOUR_GENERAL_FORM_ID" method="POST">
+          <input type="hidden" name="inquiry_type" value="General inquiry">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">
+            Send message
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -173,4 +218,3 @@
 
 </body>
 </html>
-
