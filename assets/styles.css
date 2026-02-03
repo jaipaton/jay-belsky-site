@@ -262,6 +262,51 @@ h2 {
   max-width: 820px;
 }
 
+.contact-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 14px 30px rgba(31, 58, 95, 0.08);
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.contact-card form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-card label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 58, 95, 0.2);
+  font: inherit;
+  background: #fff;
+}
+
+.contact-card textarea {
+  resize: vertical;
+}
+
 .detail {
   display: grid;
   grid-template-columns: 320px 1fr;
