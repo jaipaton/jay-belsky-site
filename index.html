@@ -163,9 +163,20 @@
     </p>
     <div class="contact-grid">
       <div class="contact-card">
-        <h3>Speaking engagements</h3>
-        <form action="https://formspree.io/f/YOUR_SPEAKING_FORM_ID" method="POST">
-          <input type="hidden" name="inquiry_type" value="Speaking engagement">
+        <h3>Send a message</h3>
+        <form id="contact-form" action="https://formspree.io/f/mrekdawe" method="POST">
+          <label>
+            Inquiry type
+            <select name="inquiry_type" id="inquiry-type" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Speaking engagement" data-endpoint="https://formspree.io/f/xwvqjzow">
+                Speaking engagement
+              </option>
+              <option value="General inquiry" data-endpoint="https://formspree.io/f/mrekdawe">
+                General inquiry
+              </option>
+            </select>
+          </label>
           <label>
             Name
             <input type="text" name="name" required>
@@ -174,30 +185,9 @@
             Email
             <input type="email" name="email" required>
           </label>
-          <label>
+          <label id="organization-field">
             Organization / Event
             <input type="text" name="organization">
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">
-            Submit speaking request
-          </button>
-        </form>
-      </div>
-      <div class="contact-card">
-        <h3>General inquiries</h3>
-        <form action="https://formspree.io/f/mrekdawe" method="POST">
-          <input type="hidden" name="inquiry_type" value="General inquiry">
-          <label>
-            Name
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required>
           </label>
           <label>
             Message
@@ -215,6 +205,31 @@
 <footer>
   © 2026 Jay Belsky · All Rights Reserved
 </footer>
+
+<script>
+  const inquirySelect = document.getElementById('inquiry-type');
+  const contactForm = document.getElementById('contact-form');
+  const organizationField = document.getElementById('organization-field');
+
+  if (inquirySelect && contactForm) {
+    const updateFormAction = () => {
+      const selectedOption = inquirySelect.options[inquirySelect.selectedIndex];
+      const endpoint = selectedOption?.dataset?.endpoint;
+
+      if (endpoint) {
+        contactForm.action = endpoint;
+      }
+
+      if (organizationField) {
+        const isSpeaking = inquirySelect.value === 'Speaking engagement';
+        organizationField.style.display = isSpeaking ? 'block' : 'none';
+      }
+    };
+
+    inquirySelect.addEventListener('change', updateFormAction);
+    updateFormAction();
+  }
+</script>
 
 </body>
 </html>
