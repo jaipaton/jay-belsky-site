@@ -262,6 +262,38 @@ h2 {
   max-width: 820px;
 }
 
+#research ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+#research li {
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 12px 24px rgba(31, 58, 95, 0.08);
+}
+
+#research li a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#research li a:hover {
+  text-decoration: underline;
+}
+
+#research li .meta {
+  display: block;
+  margin-top: 0.35rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
 .contact-grid {
   margin-top: 2rem;
   display: grid;
